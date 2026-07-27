@@ -18,16 +18,6 @@ export default function Navbar() {
     <>
       <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
         <div className="container">
-          <button
-            className="logo"
-            onClick={() => {
-              const el = document.getElementById("hero");
-              if (el) el.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Ibtahaj<span>.</span>
-          </button>
-
           <ul className="nav-links">
             {navItems.map((item) => (
               <li key={item}>
