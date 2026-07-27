@@ -1,3 +1,4 @@
+import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -11,12 +12,14 @@ import ScrollNav from "./components/ScrollNav";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function App() {
+function AppContent() {
+  const { theme } = useTheme();
+
   return (
     <>
       <ToastContainer
         position="bottom-right"
-        theme="dark"
+        theme={theme === "dark" ? "dark" : "light"}
         autoClose={4000}
         hideProgressBar={false}
         closeOnClick
@@ -32,6 +35,14 @@ function App() {
       <Contact />
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 

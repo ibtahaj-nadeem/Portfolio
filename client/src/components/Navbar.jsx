@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = ["about", "skills", "projects", "experience", "education", "contact"];
 
@@ -17,6 +18,16 @@ export default function Navbar() {
     <>
       <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
         <div className="container">
+          <button
+            className="logo"
+            onClick={() => {
+              const el = document.getElementById("hero");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Ibtahaj<span>.</span>
+          </button>
+
           <ul className="nav-links">
             {navItems.map((item) => (
               <li key={item}>
@@ -35,15 +46,19 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <button
-            className="hamburger"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span />
-            <span />
-            <span />
-          </button>
+          <div className="nav-right">
+            <ThemeToggle />
+
+            <button
+              className="hamburger"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
         </div>
       </nav>
 
