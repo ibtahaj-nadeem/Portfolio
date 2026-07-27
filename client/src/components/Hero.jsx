@@ -46,7 +46,7 @@ export default function Hero() {
                   Get in Touch
                 </button>
               </Link>
-              <a href="/cv.pdf" download="Ibtahaj_Nadeem_CV.pdf">
+              <a href="/Ibtahaj_Nadeem_CV.pdf" download="Ibtahaj_Nadeem_CV.pdf">
                 <button className="btn btn-outline">
                   <FiDownload size={16} />
                   Download CV
