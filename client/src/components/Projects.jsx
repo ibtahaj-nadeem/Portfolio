@@ -30,6 +30,30 @@ const projects = [
     github: "https://github.com/ibtahaj-nadeem/Patho-Assist-AI",
     live: "https://patho-assist-ai-omega.vercel.app",
   },
+  {
+    title: "Portfolio",
+    description:
+      "My personal developer portfolio — a modern, responsive single-page application showcasing my projects, skills, experience, and education. Features dark/light theme toggle, smooth scroll navigation, animated sections with Framer Motion, and a contact form with MongoDB backend.",
+    features: [
+      "Dark/Light theme toggle with persistent localStorage",
+      "Animated scroll navigation component",
+      "Responsive design with mobile hamburger menu",
+      "Contact form with MongoDB & Express backend",
+      "Built with Vite for optimal performance",
+    ],
+    tech: [
+      "React",
+      "Vite",
+      "Framer Motion",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "CSS Variables",
+      "Vercel",
+    ],
+    github: "https://github.com/ibtahaj-nadeem/Portfolio",
+    live: "https://portfolio-bify6hyr6-muhammad-ibtahaj-nadeems-projects.vercel.app",
+  },
 ];
 
 export default function Projects() {
