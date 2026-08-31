@@ -3,10 +3,40 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
 };
 
 const projects = [
+  {
+    title: "AI Avatar Chatbot",
+    description:
+      "A real-time 3D AI avatar chatbot that combines conversational AI, text-to-speech, and synchronized facial animation to create an interactive virtual assistant experience directly in the browser.",
+    features: [
+      "Real-time AI conversations with natural language responses",
+      "3D avatar with synchronized lip-sync and facial animation",
+      "Python-based backend for AI and speech processing",
+      "Text-to-speech with viseme-based mouth movement",
+      "Interactive and responsive browser-based chat interface",
+    ],
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Python",
+      "Three.js",
+      "React Three Fiber",
+      "WebSockets",
+      "AI/LLM",
+      "TTS",
+    ],
+    github: "https://github.com/ibtahaj-nadeem/Avatar-Chatbot",
+    live: "https://avatar-chatbot-psi.vercel.app/",
+  },
+
   {
     title: "Patho-Assist AI",
     description:
@@ -30,6 +60,7 @@ const projects = [
     github: "https://github.com/ibtahaj-nadeem/Patho-Assist-AI",
     live: "https://patho-assist-ai-omega.vercel.app",
   },
+
   {
     title: "Portfolio",
     description:
@@ -69,6 +100,7 @@ export default function Projects() {
         >
           Projects
         </motion.p>
+
         <motion.h2
           className="section-title"
           initial="hidden"
@@ -91,23 +123,25 @@ export default function Projects() {
             >
               <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>
+
                 <div className="project-links">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="GitHub"
+                      aria-label={`${project.title} GitHub repository`}
                     >
                       <FiGithub size={20} />
                     </a>
                   )}
+
                   {project.live && (
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="Live Demo"
+                      aria-label={`${project.title} live demo`}
                     >
                       <FiExternalLink size={20} />
                     </a>
@@ -118,15 +152,15 @@ export default function Projects() {
               <p className="project-desc">{project.description}</p>
 
               <ul className="project-features">
-                {project.features.map((f) => (
-                  <li key={f}>{f}</li>
+                {project.features.map((feature) => (
+                  <li key={feature}>{feature}</li>
                 ))}
               </ul>
 
               <div className="project-tech">
-                {project.tech.map((t) => (
-                  <span className="skill-tag" key={t}>
-                    {t}
+                {project.tech.map((technology) => (
+                  <span className="skill-tag" key={technology}>
+                    {technology}
                   </span>
                 ))}
               </div>
