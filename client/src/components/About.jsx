@@ -8,7 +8,7 @@ const fadeUp = {
 const stats = [
   { number: "1+", label: "Years Experience" },
   { number: "3", label: "Roles Held" },
-  { number: "BS CS", label: "COMSATS WAH" },
+  { number: "BSCS", label: "COMSATS WAH" },
   { number: "3", label: "Tech Domains" },
 ];
 
