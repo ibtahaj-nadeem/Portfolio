@@ -18,6 +18,7 @@ export default function Hero() {
     <section className="hero" id="hero">
       <div className="container">
         <div className="hero-inner">
+
           {/* Left — text */}
           <motion.div
             className="hero-content"
@@ -30,15 +31,18 @@ export default function Hero() {
               <br />
               Nadeem
             </h1>
+
             <p className="hero-roles">
-              <span className="gradient">MERN Stack Developer</span> · AI
-              Engineer · WordPress Developer
+              <span className="gradient">MERN Stack Developer</span> ·
+              Frontend & Backend Developer · AI Engineer · WordPress Developer
             </p>
+
             <p className="hero-desc">
               I build full-stack web applications, craft intelligent AI
               solutions, and create polished WordPress experiences — turning
               ideas into products that make an impact.
             </p>
+
             <div className="hero-buttons">
               <Link to="contact" smooth duration={500} offset={-64}>
                 <button className="btn btn-primary">
@@ -46,12 +50,17 @@ export default function Hero() {
                   Get in Touch
                 </button>
               </Link>
-              <a href="/Ibtahaj Nadeem-CV.pdf" download="Ibtahaj Nadeem-CV.pdf">
+
+              <a
+                href="/Ibtahaj Nadeem-CV.pdf"
+                download="Ibtahaj Nadeem-CV.pdf"
+              >
                 <button className="btn btn-outline">
                   <FiDownload size={16} />
                   Download CV
                 </button>
               </a>
+
               <a
                 href="https://linkedin.com/in/ibtahaj-nadeem"
                 target="_blank"
@@ -62,6 +71,7 @@ export default function Hero() {
                   LinkedIn
                 </button>
               </a>
+
               <a
                 href="https://github.com/ibtahaj-nadeem"
                 target="_blank"
@@ -92,11 +102,13 @@ export default function Hero() {
                   e.target.nextSibling.style.display = "flex";
                 }}
               />
+
               <div className="hero-image-placeholder">
                 <span>IN</span>
               </div>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>
